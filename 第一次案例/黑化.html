@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑化</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 300px;
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 100px;
+            background: url(R-C.gif);
+            border: 1px solid black;
+            overflow: hidden;
+            box-shadow: 3px 4px 10px 1px;
+        }
+
+        p {
+            font-size: 21px;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: aliceblue;
+            margin: 0;
+            animation-name: f666;
+            animation-duration: 3s;
+        }
+        .p1{
+            margin-top: 120px;
+        }
+        .p2{
+            margin-top: 150px;
+        }
+        div:hover p{
+            color: rgb(0, 0, 0);
+            animation-play-state: paused;
+        }
+        @keyframes f666 {
+            100%{
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="p1">
+            碰我就会黑化
+        </p>
+        <p class="p2">
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say
+            what can i say what can i say what can i say what can i say 
+        </p>
+    </div>
+
+</body>
+
+</html>

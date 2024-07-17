@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>时钟</title>
+	<style>
+		.biao-pan {
+			width: 300px;
+			height: 300px;
+			margin: 150px auto;
+			border-radius: 50%;
+			position: relative;
+			background-image: url(yh.jpg);
+			background-size: cover;
+		}
+
+		.miao-zhen,
+		.fen-zhen,
+		.shi-zhen {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+
+		.miao,
+		.fen,
+		.shi {
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+		}
+
+		.miao-zhen {
+			width: 280px;
+			height: 280px;
+			animation: move 60s linear infinite;
+		}
+
+		.miao {
+			height: 140px;
+			width: 1px;
+			background-color: rgb(255, 255, 255);
+
+		}
+
+		.fen-zhen {
+			width: 220px;
+			height: 220px;
+			animation: move 3600s linear infinite;
+		}
+
+		.fen {
+			height: 110px;
+			width: 2px;
+			background-color: rgb(255, 255, 255);
+
+		}
+
+		.shi-zhen {
+			width: 180px;
+			height: 180px;
+			animation: move 43200s linear infinite;
+		}
+
+		.shi {
+			height: 90px;
+			width: 4px;
+			background-color: rgb(255, 255, 255);
+		}
+
+		@keyframes move {
+			0% {
+				transform: rotateZ(0);
+			}
+
+			100% {
+				transform: rotateZ(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="biao-pan">
+		<div class="shi-zhen">
+			<div class="shi"></div>
+		</div>
+		<div class="fen-zhen">
+			<div class="fen"></div>
+		</div>
+		<div class="miao-zhen">
+			<div class="miao"></div>
+		</div>
+	</div>
+</body>
+
+</html>
