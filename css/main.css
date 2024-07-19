@@ -1790,6 +1790,7 @@ body.is-preload #footer {
 #main article .case p{
 	margin-left: 5%;
 	padding-bottom: 5%;
+	width: 47%;
 }
 #main article .case a{
 	position: absolute;
