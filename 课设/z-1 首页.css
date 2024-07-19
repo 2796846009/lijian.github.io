@@ -1,0 +1,450 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: heiti;
+
+}
+
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+}
+
+.head {
+    display: none;
+    position: fixed;
+    bottom: 300px;
+    left: 30px;
+    background-color: #4c4c4c;
+    border-radius: px;
+    height: 20px;
+    width: 20px;
+    padding: 5px 10px 10px 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.head:hover {
+    background-color: #188EEE;
+}
+
+.head0 {
+    background-color: rgb(240, 240, 240);
+    height: 40px;
+    font-size: small;
+    color: rgb(122, 122, 122);
+    line-height: 40px;
+    position: relative;
+}
+
+.head0 img {
+    height: 20px;
+    position: absolute;
+    right: 230px;
+    top: 10px;
+}
+
+.head0 a:hover {
+    color: #188EEE;
+}
+
+.head0 span:first-child {
+    margin-left: 150px;
+}
+
+.head0 span:nth-child(3) {
+    margin-left: 950px;
+}
+
+.head0 span:last-child {
+    margin-left: 40px;
+}
+
+.head1 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.head1 img {
+    margin-left: 150px;
+}
+
+.head1 input {
+    margin-top: 10px;
+    margin-left: 350px;
+    height: 40px;
+    width: 500px;
+    padding-left: 10px;
+    border: 2px solid #188EEE;
+}
+
+.head1 a {
+    background-color: #188EEE;
+    color: white;
+    width: 100px;
+    text-align: center;
+    height: 43.5px;
+    line-height: 45px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.head2 {
+    width: 1290px;
+    margin-left: 150px;
+    margin-top: 20px;
+    height: 60px;
+}
+
+.head2 .f0 {
+    background-color: #4c4c4c;
+    display: flex;
+    list-style: none;
+}
+
+.head2 .f0 .f00 {
+    text-align: center;
+    width: 185px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.head2 .f1 {
+    background-color: #188EEE;
+}
+
+.head2 .f00:first-child {
+    background-color: #188EEE;
+    font-weight: 600;
+}
+
+.head2 .f00:hover {
+    background-color: #188EEE;
+}
+
+.head2 .f00:hover .f1 {
+    animation-name: nav1;
+    display: block;
+
+}
+
+.head2 .f00:hover .f2 {
+    animation-name: nav2;
+    display: block;
+}
+
+.head2 .f00:hover .f3 {
+    animation-name: nav3;
+    display: block;
+}
+
+.head2 ul li a {
+    color: white;
+}
+
+.head2 .f00 ul {
+    position: absolute;
+    list-style: none;
+    background-color: #188EEE;
+    width: 185px;
+    animation-duration: 0.5s;
+    display: none;
+    overflow: hidden;
+}
+
+.f1 {
+    left: 333px;
+    top: 210px;
+
+}
+
+.f2 {
+    left: 702.5px;
+    top: 210px;
+
+}
+
+.f3 {
+    left: 1071px;
+    top: 210px;
+}
+
+@keyframes nav1 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 360px;
+
+    }
+}
+
+@keyframes nav2 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+@keyframes nav3 {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 120px;
+    }
+}
+
+.f00 ul li:hover {
+    background-color: white;
+}
+
+.f00 ul li:hover a {
+    color: #188EEE;
+}
+
+.head3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.head3 img {
+    width: 1290px;
+    margin-left: 70px;
+}
+
+.n0 {
+    margin-top: 0px;
+    margin-left: 150px;
+    font-size: 150%;
+    margin-top: 80px;
+}
+
+.n0 span {
+    font-size: 150%;
+    color: #188EEE;
+    border-bottom: 3px solid #188EEE;
+    padding-bottom: 20px;
+
+}
+
+.n1 {
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 1290px;
+    overflow: hidden;
+}
+
+.n1 .n11 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation-name: run;
+    width: 2280px;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes run {
+    100% {
+        transform: translate(-2300px, 0);
+    }
+}
+
+.n11:hover {
+    animation-play-state: paused;
+    cursor: grab;
+}
+
+.n11 div {
+    text-align: center;
+    margin-right: 20px;
+    background-color: aliceblue;
+}
+
+.n11 div:hover {
+    box-shadow: 3px 4px 7px -4px;
+}
+
+.n11 div img {
+    width: 440px;
+    height: 350px;
+}
+
+.n11 div p {
+    margin: 10px;
+}
+
+.Ft {
+    background-color: #188EEE;
+    margin-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.Ft .ft {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 1290px;
+    margin-left: 150px;
+    border-bottom: 1px solid #4c4c4c;
+}
+
+.ft .ft1 {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.ft2 {
+    text-align: end;
+    line-height: 40px;
+}
+
+.ft2 p {
+    margin-right: 10px;
+}
+
+.ft .ft2 div a {
+    color: white;
+    margin: 5px;
+}
+
+.ft .ft2 div a:hover {
+    color: #4c4c4c;
+}
+
+.Ft .ft0 {
+    color: white;
+    margin-left: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.n2 {
+    margin-top: 80px;
+    margin-left: 150px;
+    font-size: 150%;
+}
+
+.n2 span {
+    font-size: 150%;
+    color: #188EEE;
+    border-bottom: 3px solid #188EEE;
+    padding-bottom: 20px;
+}
+
+.n3 {
+    margin-top: 50px;
+    margin-left: 150px;
+    background-color: #188EEE;
+    color: white;
+    width: 650px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.n3 img {
+    width: 650px;
+    height: 380px;
+    margin-bottom: 10px;
+}
+
+.n3 p {
+    text-align: start;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.n4 {
+    position: absolute;
+    top: 734px;
+    right: 78px;
+    background-color: aliceblue;
+    width: 621px;
+}
+
+.n4 .n41 {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    padding: 0px 20px 5px 20px;
+
+}
+
+.n41 p:nth-child(2) {
+    color: #535353;
+}
+
+.n41:hover .n411 {
+    cursor: pointer;
+    transform: translateX(10%);
+    transition: 0.8s;
+    color: #188EEE;
+}
+
+.n41:hover .n412 {
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 1s;
+    color: #188EEE;
+}
+
+.n4 .n40 {
+    height: 72px;
+    padding-left: 120px;
+    line-height: 72px;
+    background: linear-gradient(to right, #188EEE, white);
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.n6 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 150px;
+    width: 1292px;
+}
+
+
+.n6 div {
+    width: 500px;
+}
+
+.n6 div div {
+    width: 415px;
+    color: #616161;
+}
+
+.n6 ul {
+    list-style: none;
+    font-size: large;
+    line-height: 50px;
+    margin-top: 100px;
+}
+
+.n6 ul li {
+    margin-top: 15px;
+}
+
+.active {
+    cursor: pointer;
+    border-left: 5px solid #188EEE;
+    padding-left: 20px;
+    transition: 0.5s;
+    color: #188EEE;
+}

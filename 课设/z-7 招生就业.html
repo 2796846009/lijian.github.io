@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招生就业</title>
+    <link rel="stylesheet" href="z-1 首页.css">
+    <style>
+        * {
+            font-family: microsoft yahei;
+        }
+
+        .head2 .f00:first-child {
+            background-color: #4c4c4c;
+            font-weight: 400;
+        }
+
+        .head2 .f00:hover {
+            background-color: #188EEE;
+        }
+
+        .head2 .f00:nth-child(6) {
+            background-color: #188EEE;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-weight: 500;
+        }
+
+        .h1 {
+            border-bottom: 4px solid #188EEE;
+            width: 300px;
+            margin-top: 60px;
+            margin-left: 630px;
+            text-align: center;
+            padding-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .b {
+            width: 1200px;
+            margin-left: 200px;
+        }
+
+        .b ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .b ul li {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid white;
+            box-shadow: 0 0 10px #a1a1a1;
+            width: 400px;
+            height: 200px;
+            margin-top: 100px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .b li p {
+            padding-left: 40px;
+            margin-left: -3px;
+            margin-top: 60px;
+            font-size: 150%;
+            border-left: 4px solid #188EEE;
+            height: 50px;
+        }
+
+        .b li svg {
+            position: absolute;
+            top: 110px;
+            left: 35px;
+        }
+
+        .b li div {
+            background-color: aliceblue;
+            width: 150px;
+            height: 150px;
+            margin-top: 30px;
+            margin-right: 35px;
+        }
+
+        .b li div img {
+            margin-left: 35px;
+            margin-top: 30px
+        }
+
+        .b li:hover {
+            box-shadow: 0 0 10px #188EEE;
+            transition: 1s;
+        }
+
+        .b li:hover .b0 {
+            animation: moveright 1s ease-in-out;
+            display: block;
+        }
+
+        @keyframes moveright {
+            0% {
+                left: -300px;
+            }
+
+            100% {
+                left: -190px;
+            }
+        }
+
+        .b .b0 {
+            position: absolute;
+            top: -120px;
+            left: -190px;
+            background-color: transparent;
+            height: 330px;
+            color: #188EEE;
+            border: 1px dashed #000000;
+            padding: 10px;
+            font-size: small;
+            display: none;
+            /* 默认隐藏 */
+        }
+
+        .b li:nth-child(2) .b0 {
+            height: 240px;
+            top: -80px;
+        }
+
+        .b li:nth-child(3) .b0 {
+            height: 270px;
+            top: -90px;
+        }
+
+        .b li:nth-child(4) .b0 {
+            height: 140px;
+            top: -30px;
+        }
+
+        .b li:nth-child(5) .b0 {
+            height: 240px;
+            top: -70px;
+        }
+
+        .b li:hover .b1 {
+            background-color: #188EEE;
+            transition: 0.7s;
+            border-radius: 50%;
+        }
+
+        .b li:hover .b2 {
+            padding-top: 60px;
+            margin-top: 0px;
+            height: 141px;
+            transition: 0.5s;
+            color: #188EEE;
+        }
+
+        .b li:hover svg {
+            transform: rotate(180deg);
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head0" id="head0">
+        <span>你好，欢迎访问兰州城市学院官网！</span>
+        <img src="1.1.png" alt="">
+        <span><a href="z-2 登录注册.html">登录</a></span>
+        <span><a href="z-2 登录注册.html">注册</a></span>
+    </div>
+    <div class="head1">
+        <img src="logo.png" alt="">
+        <input type="text" placeholder="输入关键字...">
+        <a href="">搜索</a>
+    </div>
+    <div class="head2">
+        <ul class="f0">
+            <li class="f00"><a href="z-1 首页.html">网站首页</a></li>
+            <li class="f00">
+                <a href="z-3 校歌.html">学校概况</a>
+                <ul class="f1">
+                    <li><a href="">校徽</a></li>
+                    <li><a href="">校训</a></li>
+                    <li><a href="z-3 校歌.html">校歌</a></li>
+                    <li><a href="">平面图</a></li>
+                    <li><a href="">校园风光</a></li>
+                    <li><a href="">联系方式</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-4 人才招聘.html">人才招聘</a></li>
+            <li class="f00">
+                <a href="z-5 科学研究.html">科学研究</a>
+                <ul class="f2">
+                    <li><a href="">甘肃高校学报</a></li>
+                    <li><a href="">科研平台</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-6 师资力量.html">师资力量</a></li>
+            <li class="f00">
+                <a href="z-7 招生就业.html">招生就业</a>
+                <ul class="f3">
+                    <li><a href="">录取查询</a></li>
+                    <li><a href="">招生网</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-8 校园新闻.html">校园新闻</a></li>
+        </ul>
+    </div>
+    <h1 class="h1">招生</h1>
+    <div class="b">
+        <ul>
+            <li>
+                <div class="b0">
+                    <i>本科生，即接受大学本科教育的学生。区别于专科生，本科生毕业后可获学士学位。
+                        在中国普通高考当中，本科录取分为提前批次、本科一批（一本）、本科二批（二本）和本科
+                        三批（三本）（2017年部分地区取消本科三批）。艺术类本科和体育类本科都为提前批次本科，和
+                        普通院校一本、二本、三本无关。2021年，全国共有普通本科学校1238所，普通本科招生4
+                        44.60万人、普通本科在校生1893.10万人，共有普通本科学校教师126.97万人
+                    </i>
+                </div>
+                <p class="b2">本科生</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (1).png" alt=""></div>
+            </li>
+            <li>
+                <div class="b0">
+                    <i>硕士研究生，即攻读硕士学位的研究生。硕士研究生是本科之后的深造学历。
+                        与本科阶段相比，研究生教育更注重培养学生的研究问题和分析问题的能力，
+                        特别是该学科的科研和教学能力。硕士（Master's）是一个介于学士（Bache
+                        lor's）及博士（Ph.D.）之间的学位，拥有硕士学位者通常象征具有基础的独立的思考能力。
+                    </i>
+                </div>
+                <p class="b2">硕士研究生</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (3).png" alt=""></div>
+            </li>
+            <li>
+                <div class="b0">
+                    <i>博士研究生，即攻读博士学位的研究生，简称博士生，是研究生学位中最高的一级。
+                        人们日常生活中所说的考上了博士，读博士等，正是指博士研究生。正在读的还没有
+                        获得博士学位的学生，严格来讲只能称为博士研究生；已经获得博士学位的人员，才
+                        是真正意义上的博士。因此，按照国际惯例，在正式场合，只有已经获得博士学位的
+                        人才能冠之以"Dr."称呼；在非正式场合可以不受此限制。
+                    </i>
+                </div>
+                <p class="b2">博士研究生</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (5).png" alt=""></div>
+            </li>
+            <li>
+                <div class="b0">
+                    <i>留学生，是指在母国以外进行留学的学生。“留学生”一词起源于中国唐朝时期
+                        中日文化交流，意为当遣唐使回国后仍然留在中国学习的日本学生，泛指留居外国学习或者研究的学生。
+                    </i>
+                </div>
+                <p class="b2">留学生</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (7).png" alt=""></div>
+            </li>
+            <li>
+                <div class="b0">
+                    <i>终身教育（lifelong education） 是指人们在一生各阶段当中所受各种教育的总和，
+                        是人所受不同类型教育的统一综合。包括教育体系的各个阶段和各种方式，既有学校
+                        教育，又有社会教育；既有正规教育，也有非正规教育。主张在每一个人需要的时刻以
+                        最好的方式提供必要的知识和技能。终身教育思想成为很多国家教育改革的指导方针。
+                    </i>
+                </div>
+                <p class="b2">终身教育</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (9).png" alt=""></div>
+            </li>
+            <li>
+                <div class="b0">
+                    <i>远程教育是以师生准分离为基本特征，利用多种媒体系统地开展教育教学的一种教育形式。
+                        远程教育系统不仅提供学历教育，还提供非学历教育，是扩大教育规模、普及国民教育的
+                        一种重要手段，已经成为终身教育体系中的一个重要组成部分。远程教育所使用的信息传
+                        播方式有：通过印刷教材、录音教材、电视录像教材与其他教材邮递的函授方式，有线广
+                        播和无线广播方式，卫星电视方式，以及网络传送方式。在多数情况下，一个系统往往同
+                        时采取多种方式进行远程教育活动。
+                    </i>
+                </div>
+                <p class="b2">远程教育</p>
+                <svg t="1718716889663" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3257" width="50" height="50">
+                    <path d="M553.6 790.4l-44.8-44.8 233.6-233.6-233.6-233.6 44.8-44.8L832 512z" fill="#181818"
+                        p-id="3258"></path>
+                    <path d="M192 480h576v64H192z" fill="#181818" p-id="3259"></path>
+                </svg>
+                <div class="b1"><img src="6 (11).png" alt=""></div>
+            </li>
+        </ul>
+    </div>
+    <div class="Ft">
+        <div class="ft">
+            <div class="ft1">
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>微信公众号</p>
+                </div>
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>新浪微博</p>
+                </div>
+            </div>
+            <div class="ft2">
+                <div>
+                    <a href="">网站首页</a>
+                    <a href="">学校简介</a>
+                    <a href="">学科资源</a>
+                    <a href="">师资力量</a>
+                    <a href="">新闻中心</a>
+                    <a href="">校园风采</a>
+                    <a href="">在线报名</a>
+                    <a href="">联系我们</a>
+                </div>
+                <p>电话：0931-7601072</p>
+                <p>地址：甘肃省兰州市安宁区街坊路11号</p>
+                <p>邮编：730070</p>
+            </div>
+        </div>
+        <p class="ft0">Copyrights 2088 All rights reserved.版权所有 兰州城市学院</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>师资力量ydd</title>
+    <style>
+        * {
+            font-family: microsoft yahei;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            border-bottom: 4px solid #188EEE;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+        }
+
+        .p5 {
+            margin: auto;
+            color: rgb(111, 111, 111);
+            width: 90%;
+        }
+
+        .b1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .b1 div img {
+            margin-bottom: 10px;
+            height: 40%;
+        }
+
+        .b1 div {
+            text-align: center;
+            font-size: 80%;
+        }
+
+        .b2 {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            text-align: center;
+        }
+
+        .b2 div p:first-child {
+            color: #188EEE;
+            font-size: 200%;
+        }
+
+        .b2 div p:last-child {
+            font-size: 70%;
+        }
+
+        .Ft {
+            background-color: #188EEE;
+            color: white;
+            font-size: 80%;
+            padding-top: 20px;
+            margin-top: 50px;
+        }
+
+        .ft1 {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .ft1 img {
+            height: 50%;
+        }
+
+        .ft2{
+            padding: 5%;
+            padding-top: 0;
+        }
+
+        .ft2 div {
+            margin-bottom: 20px;
+        }
+
+        .ft2 a {
+            color: white;
+            text-decoration: none;
+        }
+        .Ft .ft0{
+            font-size: 90%;
+            text-align: center;
+            padding: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>师资队伍</h1>
+    <p class="p5">兰州城市学院培育和凝聚了一批又一批高水平的专家学者。近年来，学校遵循"引进与培养并举"的方针，
+        加强青年教师队伍建设，在国内外选聘优秀人才，师资队伍水平稳步提高
+    </p>
+    <div class="b1">
+        <div>
+            <img src="4 (1).png" alt="">
+            <p>国家重要奖励获得者</p>
+            </img>
+        </div>
+        <div>
+            <img src="4 (2).png" alt="">
+            <p>省骨干级教师</p>
+            </img>
+        </div>
+        <div>
+            <img src="4 (3).png" alt="">
+            <p>国家优秀级专家</p>
+            </img>
+        </div>
+    </div>
+    <div class="b2">
+        <div>
+            <p class="b2p1" id="b2p1">1161</p>
+            <p>教职工人数</p>
+        </div>
+        <div>
+            <p class="b2p2" id="b2p2">120</p>
+            <p>教授人数</p>
+        </div>
+        <div>
+            <p class="b2p3" id="b2p3">338</p>
+            <p>副教授人数</p>
+        </div>
+        <div>
+            <p class="b2p4" id="b2p4">179</p>
+            <p>博士人数</p>
+        </div>
+        <div>
+            <p class="b2p5" id="b2p5">608</p>
+            <p>硕士人数</p>
+        </div>
+    </div>
+    <script>
+        function NumDynamic(ID, speed, value) {
+            let p = document.getElementById(ID);
+            if (value > 0) {
+                let num = 0;
+                let t = setInterval(function () {
+                    num += 1;
+                    p.innerText = num;
+                    if (num >= value) {
+                        clearInterval(t);
+                    }
+                }, speed);
+            } else {
+                p.innerText = value;
+            }
+        }
+
+        function NumDynamic1(ID, speed, value) {
+            let p = document.getElementById(ID);
+            if (value > 0) {
+                let num = 0;
+                let t = setInterval(function () {
+                    num += 4;
+                    p.innerText = num;
+                    if (num >= value) {
+                        clearInterval(t);
+                    }
+                }, speed);
+            } else {
+                p.innerText = value;
+            }
+        }
+        NumDynamic1("b2p1", 10, 1161);
+        NumDynamic("b2p2", 10, 120);
+        NumDynamic("b2p3", 10, 338);
+        NumDynamic("b2p4", 10, 179);
+        NumDynamic1("b2p5", 10, 608);
+    </script>
+    <div class="Ft">
+        <div class="ft">
+            <div class="ft1">
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>微信公众号</p>
+                </div>
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>新浪微博</p>
+                </div>
+            </div>
+            <div class="ft2">
+                <div>
+                    <a href="">网站首页</a>
+                    <a href="">学校简介</a>
+                    <a href="">学科资源</a>
+                    <a href="">师资力量</a>
+                    <a href="">新闻中心</a>
+                    <a href="">校园风采</a>
+                    <a href="">在线报名</a>
+                    <a href="">联系我们</a>
+                </div>
+                <p>电话：0931-7601072</p>
+                <p>地址：甘肃省兰州市安宁区街坊路11号</p>
+                <p>邮编：730070</p>
+            </div>
+        </div>
+        <p class="ft0">Copyrights 2088 All rights reserved.版权所有 兰州城市学院</p>
+    </div>
+</body>
+
+</html>

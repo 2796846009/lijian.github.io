@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: heiti;
+}
+
+body {
+    display: flex;
+    border: 18px solid #188EEE;
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+}
+
+@keyframes square-in-center {
+    from {
+        clip-path: inset(100% 100% 100% 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.n1css {
+    animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-bottom-right both; /* 贝塞尔曲线函数 */
+}
+
+.n2css {
+    animation: 2s cubic-bezier(.25, 1, .30, 1) square-in-bottom-left both;
+}
+
+@keyframes square-in-bottom-right {
+    from {
+        clip-path: inset(0 100% 100% 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes square-in-bottom-left {
+    from {
+      clip-path: inset(0 0 100% 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+.he2 img {
+    height: 600px;
+    margin-top: 100px;
+}
+
+.he1 {
+    width: 1006px;
+    padding-top: 50px;
+    padding-left: 80px;
+}
+
+.he1 h1 {
+    margin-top: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #188EEE, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.he1 ul {
+    margin-top: 30px;
+    margin-left: 70px;
+    list-style: none;
+    line-height: 50px;
+    color: rgb(137, 137, 137);
+    font-size: large;
+}
+
+.n2 {
+    display: none;
+    width: 400px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 100px;
+    margin-top: 180px;
+    padding: 30px 0 30px 0;
+}
+
+.n2 .n21 {
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    font-weight: 600;
+    padding: 0 30px 0 30px;
+}
+
+.n2 .n21 button {
+    text-align: center;
+    width: 120px;
+    padding-bottom: 15px;
+    border: 0;
+    background-color: aliceblue;
+    font-size: large;
+}
+
+.n2 .n21 button:last-child {
+    border-bottom: 3px solid #188EEE;
+    color: #188EEE;
+}
+
+.n2 input {
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-left: 10px;
+    border: 0;
+}
+
+.n2 a button {
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 40px;
+    width: 312px;
+    color: white;
+    background-color: #188EEE;
+    border-radius: 20px;
+    border: 0;
+}
+
+.n2 .n22 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 90%;
+    margin-top: 10px;
+    padding: 0 50px 0 50px;
+}
+
+.n22 a {
+    text-decoration: none;
+    color: #188EEE;
+}
+
+.n22 a:hover {
+    color: rgb(106, 106, 106);
+}
+
+.n1 {
+    width: 400px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 100px;
+    margin-top: 180px;
+    padding: 30px 0 30px 0;
+}
+
+.n1 .n11 {
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+    font-weight: 600;
+    padding: 0 30px 0 30px;
+}
+
+.n1 .n11 button {
+    text-align: center;
+    width: 120px;
+    padding-bottom: 15px;
+    border: 0;
+    background-color: aliceblue;
+    font-size: large;
+}
+
+.n1 .n11 button:first-child {
+    border-bottom: 3px solid #188EEE;
+    color: #188EEE;
+}
+
+.n1 input {
+    width: 300px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-left: 10px;
+    border: 0;
+}
+
+.n1 a button {
+    margin-left: 50px;
+    margin-top: 20px;
+    height: 40px;
+    width: 312px;
+    color: white;
+    background-color: #188EEE;
+    border-radius: 20px;
+    border: 0;
+}
+
+.n1 .n12 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 90%;
+    margin-top: 10px;
+    padding: 0 50px 0 50px;
+}
+
+.n12 a {
+    text-decoration: none;
+    color: #188EEE;
+}
+
+.n12 a:hover {
+    color: rgb(106, 106, 106);
+}
+
+.n3 {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    height: 30px;
+}

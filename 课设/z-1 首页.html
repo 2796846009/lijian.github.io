@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="z-1 首页.css">
+</head>
+
+<body>
+    <div class="head">
+        Top
+    </div>
+    <script>
+        let backtop = document.querySelector(".head")
+        window.addEventListener("scroll", function () {
+            let num = document.documentElement.scrollTop
+            if (num >= 600) {
+                backtop.style.display = "block"
+            } else {
+                backtop.style.display = "none"
+            }
+        })
+        backtop.addEventListener("click", function () {
+            document.querySelector(".head0").scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+            })
+        })
+    </script>
+    <div class="head0" id="head0">
+        <span>你好，欢迎访问兰州城市学院官网！</span>
+        <img src="1.1.png" alt="">
+        <span><a href="z-2 登录注册.html">登录</a></span>
+        <span><a href="z-2 登录注册.html">注册</a></span>
+    </div>
+    <div class="head1">
+        <img src="logo.png" alt="">
+        <input type="text" placeholder="输入关键字...">
+        <a href="">搜索</a>
+    </div>
+    <div class="head2">
+        <ul class="f0">
+            <li class="f00"><a href="z-1 首页.html">网站首页</a></li>
+            <li class="f00">
+                <a href="z-3 校歌.html">学校概况</a>
+                <ul class="f1">
+                    <li><a href="">校徽</a></li>
+                    <li><a href="">校训</a></li>
+                    <li><a href="z-3 校歌.html">校歌</a></li>
+                    <li><a href="">平面图</a></li>
+                    <li><a href="">校园风光</a></li>
+                    <li><a href="">联系方式</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-4 人才招聘.html">人才招聘</a></li>
+            <li class="f00">
+                <a href="z-5 科学研究.html">科学研究</a>
+                <ul class="f2">
+                    <li><a href="">甘肃高校学报</a></li>
+                    <li><a href="">科研平台</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-6 师资力量.html">师资力量</a></li>
+            <li class="f00">
+                <a href="z-7 招生就业.html">招生就业</a>
+                <ul class="f3">
+                    <li><a href="">录取查询</a></li>
+                    <li><a href="">招生网</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-8 校园新闻.html">校园新闻</a></li>
+        </ul>
+    </div>
+    <div class="head3">
+        <img src="1.2 (1).jpg" title="兰州城市学院">
+        <script>
+            let data = [
+                {
+                    imgSrc: '1.2 (1).jpg',
+                },
+                {
+                    imgSrc: '1.2 (1).png',
+                },
+                {
+                    imgSrc: '1.2 (2).jpg',
+                },
+                {
+                    imgSrc: '1.2 (2).png',
+                },
+                {
+                    imgSrc: '1.2 (3).jpg',
+                },
+                {
+                    imgSrc: '1.2 (4).jpg',
+                },
+                {
+                    imgSrc: '1.2 (5).jpg',
+                }
+            ]
+            let pic = document.querySelector(".head3 img")
+            let index = 0
+            function lunbo() {
+                if (data.length == index) {
+                    index = 0
+                } else {
+                    index++
+                }
+                pic.src = data[index].imgSrc
+            }
+            setInterval("lunbo()", 1200)
+        </script>
+    </div>
+    <p class="n2"><span>学校要闻</span>/School News</p>
+    <div class="n3">
+        <img src="1.4 (1).jpg" class="n31">
+        <h3 class="n32">学校举办白俄罗斯格罗德诺扬卡·库帕拉国立大学"客座教授"项目经验分享会</h3>
+        <p class="n33">2024-05-16</p>
+        <script>
+            let data1 = [
+                {
+                    imgSrc: '1.4 (1).jpg',
+                    title: '学校举办白俄罗斯格罗德诺扬卡·库帕拉国立大学"客座教授"项目经验分享会',
+                    tab: '2024-05-16'
+                },
+                {
+                    imgSrc: '1.4 (2).jpg',
+                    title: '学校举办"理响校园·培根铸魂"全国两会精社',
+                    tab: '2024-05-16'
+                },
+                {
+                    imgSrc: '1.4 (3).jpg',
+                    title: '兰州城市学院:对接"强省会"行动 服务地方经济社会发展',
+                    tab: '2024-03-18'
+                },
+                {
+                    imgSrc: '1.4 (1).jpg',
+                    title: '学校举办白俄罗斯格罗德诺扬卡·库帕拉国立大学"客座教授"项目经验分享会',
+                    tab: '2024-05-16'
+                },
+                {
+                    imgSrc: '1.4 (2).jpg',
+                    title: '学校举办"理响校园·培根铸魂"全国两会精社',
+                    tab: '2024-05-16'
+                },
+                {
+                    imgSrc: '1.4 (3).jpg',
+                    title: '兰州城市学院:对接"强省会"行动 服务地方经济社会发展',
+                    tab: '2024-03-18'
+                },
+                {
+                    imgSrc: '1.4 (1).jpg',
+                    title: '学校举办白俄罗斯格罗德诺扬卡·库帕拉国立大学"客座教授"项目经验分享会',
+                    tab: '2024-05-16'
+                },
+                {
+                    imgSrc: '1.4 (2).jpg',
+                    title: '学校举办"理响校园·培根铸魂"全国两会精社',
+                    tab: '2024-05-16'
+                },
+            ]
+            let pic1 = document.querySelector(".n31")
+            let text = document.querySelector(".n32")
+            let p = document.querySelector(".n33")
+            let index1 = 0
+            function lb() {
+                if (data1.length == index1) {
+                    index1 = 0
+                } else {
+                    index1++
+                }
+                pic1.src = data1[index].imgSrc
+                text.innerHTML = data1[index].title
+                p.innerHTML = data1[index].tab
+            }
+            setInterval("lb()", 200)
+        </script>
+    </div>
+    <div class="n4">
+        <div class="n40"></div>
+        <script>
+            let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            let div = document.querySelector(".n40")
+            show();
+            setInterval(show, 1000)
+            function show() {
+                let date = new Date()
+                let y = date.getFullYear()
+                let m = date.getMonth() + 1
+                let d = date.getDate()
+                let h = date.getHours()
+                let mm = date.getMinutes()
+                let s = date.getSeconds()
+                let day = date.getDay()
+                if (m < 10) {
+                    m = '0' + m;
+                }
+                if (d < 10) {
+                    d = '0' + d;
+                }
+                if (h < 10) {
+                    h = '0' + h;
+                }
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+                if (s < 10) {
+                    s = '0' + s;
+                }
+                div.innerHTML = y + "年" + m + "月" + d + "日" + "&nbsp&nbsp&nbsp&nbsp" + h + ":" + mm + ":" + s + "&nbsp&nbsp&nbsp&nbsp" + arr[day]
+            }
+        </script>
+        <div class="n41">
+            <p class="n411">【人民日报】兰州城市学院:对接“强省会”行动 服务地方..</p>
+            <p class="n412">2024-03-18</p>
+        </div>
+        <div class="n41">
+            <p class="n411">【央广网】兰州城市学院高质量发展咨询会顺利召开</p>
+            <p class="n412">2024-01-18</p>
+        </div>
+        <div class="n41">
+            <p class="n411">为中国式现代化挺膺担当--青春年少好读书”甘肃省学...</p>
+            <p class="n412">2024-05-29</p>
+        </div>
+        <div class="n41">
+            <p class="n411">全国对外友协副会长鄢东一行来校访问</p>
+            <p class="n412">2024-05-29</p>
+        </div>
+        <div class="n41">
+            <p class="n411">兰州城市学院与北京广慧金通教育集团举行民航教学实训中..</p>
+            <p class="n412">2024-05-28</p>
+        </div>
+        <div class="n41">
+            <p class="n411">“陇原大讲堂”专题报告会在我校成功举办</p>
+            <p class="n412">2024-05-28</p>
+        </div>
+        <div class="n41">
+            <p class="n411">我校学子荣获2024全国大学生英语竞赛(NECCS)甘肃赛区-..</p>
+            <p class="n412">2024-05-28</p>
+        </div>
+        <div class="n41">
+            <p class="n411">查宿舍安全 筑温馨港湾|陈伟一行走访化学工程学院学生宿舍</p>
+            <p class="n412">2024-05-28</p>
+        </div>
+        <div class="n41">
+            <p class="n411">大思政课|韩高年深入课堂为学生讲授形势与政策课</p>
+            <p class="n412">2024-05-17</p>
+        </div>
+    </div>
+    <p class="n2"><span>学术科研</span>/Academic research</p>
+    <div class="n6">
+        <div>
+            <div>
+                城市学院始终坚持面向世界科技前沿和国家重大战略需要，
+                坚定地走中国特色自主创新之路。百年创新，硕果累累，
+                城院师生在科技进步和学术发展中填补了一个又一个空白，
+                刷新着一项又一项纪录，作出了重要的思想、理论和知识贡献。
+            </div>
+            <ul>
+                <li>学校召开学生资助工作培训会</li>
+                <li>甘肃省本科院校新建图书馆文化建设研讨会在我校召开</li>
+                <li>兰州城市学院大学生骨干培养学校第七期培训班结业</li>
+                <li>南京艺术学院杨曦帆教授来校作学术报告</li>
+            </ul>
+        </div>
+        <img src="1.5 (1).jpg" alt="" style="height: 450px; width: 750px;">
+    </div>
+    <script>
+        let li = document.querySelectorAll('.n6 li')
+        let img = document.querySelector('.n6 img')
+        li[0].classList.add('active')
+        li[0].addEventListener('mouseover', function () {
+            img.src = "1.5 (1).jpg"
+            li[0].classList.add('active')
+            li[1].classList.remove('active')
+            li[2].classList.remove('active')
+            li[3].classList.remove('active')
+        })
+        li[1].addEventListener('mouseover', function () {
+            img.src = "1.5 (2).jpg"
+            li[0].classList.remove('active')
+            li[1].classList.add('active')
+            li[2].classList.remove('active')
+            li[3].classList.remove('active')
+        })
+        li[2].addEventListener('mouseover', function () {
+            img.src = "1.5 (3).jpg"
+            li[0].classList.remove('active')
+            li[1].classList.remove('active')
+            li[2].classList.add('active')
+            li[3].classList.remove('active')
+        })
+        li[3].addEventListener('mouseover', function () {
+            img.src = "1.5 (4).jpg"
+            li[0].classList.remove('active')
+            li[1].classList.remove('active')
+            li[2].classList.remove('active')
+            li[3].classList.add('active')
+        })
+    </script>
+    <p class="n0"><span>校园风采</span>/Campus style</p>
+    <div class="n1">
+
+        <div class="n11">
+            <div>
+                <img src="1.3 (1).jpg" alt="">
+                <p>笃实楼</p>
+            </div>
+            <div>
+                <img src="1.3 (2).jpg" alt="">
+                <p>逸夫图书馆</p>
+            </div>
+            <div>
+                <img src="1.3 (3).jpg" alt="">
+                <p>城关校区</p>
+            </div>
+            <div>
+                <img src="1.3 (4).jpg" alt="">
+                <p>校训</p>
+            </div>
+            <div>
+                <img src="1.3 (5).jpg" alt="">
+                <p>明理楼</p>
+            </div>
+            <div>
+                <img src="1.3 (1).jpg" alt="">
+                <p>笃实楼</p>
+            </div>
+            <div>
+                <img src="1.3 (2).jpg" alt="">
+                <p>逸夫图书馆</p>
+            </div>
+            <div>
+                <img src="1.3 (3).jpg" alt="">
+                <p>城关校区</p>
+            </div>
+        </div>
+    </div>
+    <div class="Ft">
+        <div class="ft">
+            <div class="ft1">
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>微信公众号</p>
+                </div>
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>新浪微博</p>
+                </div>
+            </div>
+            <div class="ft2">
+                <div>
+                    <a href="">网站首页</a>
+                    <a href="">学校简介</a>
+                    <a href="">学科资源</a>
+                    <a href="">师资力量</a>
+                    <a href="">新闻中心</a>
+                    <a href="">校园风采</a>
+                    <a href="">在线报名</a>
+                    <a href="">联系我们</a>
+                </div>
+                <p>电话：0931-7601072</p>
+                <p>地址：甘肃省兰州市安宁区街坊路11号</p>
+                <p>邮编：730070</p>
+            </div>
+        </div>
+        <p class="ft0">Copyrights 2088 All rights reserved.版权所有 兰州城市学院</p>
+    </div>
+</body>
+
+</html>

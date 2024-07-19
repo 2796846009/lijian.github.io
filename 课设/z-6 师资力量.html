@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>师资力量</title>
+    <link rel="stylesheet" href="z-1 首页.css">
+    <style>
+        * {
+            font-family: microsoft yahei;
+        }
+
+        .head2 .f00:first-child {
+            background-color: #4c4c4c;
+            font-weight: 400;
+        }
+
+        .head2 .f00:hover {
+            background-color: #188EEE;
+        }
+
+        .head2 .f00:nth-child(5) {
+            background-color: #188EEE;
+            font-weight: 600;
+        }
+
+        h1 {
+            border-bottom: 4px solid #188EEE;
+            width: 300px;
+            margin-top: 60px;
+            margin-left: 630px;
+            text-align: center;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+        }
+
+        .p5 {
+            margin-top: 30px;
+            margin-left: 160px;
+            color: rgb(111, 111, 111);
+        }
+
+        .b1 {
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            margin-left: 300px;
+            margin-top: 20px;
+        }
+
+        .b1 div img {
+            margin-bottom: 10px;
+        }
+
+        .b1 div {
+            text-align: center;
+        }
+
+        .b2 {
+            display: flex;
+            justify-content: space-between;
+            width: 1250px;
+            margin-left: 210px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .b2 div {
+            padding-right: 100px;
+            border-right: 1px solid #a7a7a7;
+            font-size: small;
+        }
+
+        .b2 div:last-child {
+            border: 0;
+        }
+
+        .b2 div p:first-child {
+            color: #188EEE;
+            font-size: 500%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head0" id="head0">
+        <span>你好，欢迎访问兰州城市学院官网！</span>
+        <img src="1.1.png" alt="">
+        <span><a href="z-2 登录注册.html">登录</a></span>
+        <span><a href="z-2 登录注册.html">注册</a></span>
+    </div>
+    <div class="head1">
+        <img src="logo.png" alt="">
+        <input type="text" placeholder="输入关键字...">
+        <a href="">搜索</a>
+    </div>
+    <div class="head2">
+        <ul class="f0">
+            <li class="f00"><a href="z-1 首页.html">网站首页</a></li>
+            <li class="f00">
+                <a href="z-3 校歌.html">学校概况</a>
+                <ul class="f1">
+                    <li><a href="">校徽</a></li>
+                    <li><a href="">校训</a></li>
+                    <li><a href="z-3 校歌.html">校歌</a></li>
+                    <li><a href="">平面图</a></li>
+                    <li><a href="">校园风光</a></li>
+                    <li><a href="">联系方式</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-4 人才招聘.html">人才招聘</a></li>
+            <li class="f00">
+                <a href="z-5 科学研究.html">科学研究</a>
+                <ul class="f2">
+                    <li><a href="">甘肃高校学报</a></li>
+                    <li><a href="">科研平台</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-6 师资力量.html">师资力量</a></li>
+            <li class="f00">
+                <a href="z-7 招生就业.html">招生就业</a>
+                <ul class="f3">
+                    <li><a href="">录取查询</a></li>
+                    <li><a href="">招生网</a></li>
+                </ul>
+            </li>
+            <li class="f00"><a href="z-8 校园新闻.html">校园新闻</a></li>
+        </ul>
+    </div>
+    <h1>师资队伍</h1>
+    <p class="p5">兰州城市学院培育和凝聚了一批又一批高水平的专家学者。近年来，学校遵循"引进与培养并举"的方针，
+        加强青年教师队伍建设，在国内外选聘优秀人才，师资队伍水平稳步提高
+    </p>
+    <div class="b1">
+        <div>
+            <img src="4 (1).png" alt="">
+            <p>国家重要奖励获得者</p>
+            </img>
+        </div>
+        <div>
+            <img src="4 (2).png" alt="">
+            <p>省骨干级教师</p>
+            </img>
+        </div>
+        <div>
+            <img src="4 (3).png" alt="">
+            <p>国家优秀级专家</p>
+            </img>
+        </div>
+    </div>
+    <div class="b2">
+        <div>
+            <p class="b2p1" id="b2p1">1161</p>
+            <p>教职工人数</p>
+        </div>
+        <div>
+            <p class="b2p2" id="b2p2">120</p>
+            <p>教授人数</p>
+        </div>
+        <div>
+            <p class="b2p3" id="b2p3">338</p>
+            <p>副教授人数</p>
+        </div>
+        <div>
+            <p class="b2p4" id="b2p4">179</p>
+            <p>博士人数</p>
+        </div>
+        <div>
+            <p class="b2p5" id="b2p5">608</p>
+            <p>硕士人数</p>
+        </div>
+    </div>
+    <script>
+        function NumDynamic(ID, speed, value) {
+            let p = document.getElementById(ID);
+            if (value > 0) {
+                let num = 0;
+                let t = setInterval(function () {
+                    num += 1;
+                    p.innerText = num;
+                    if (num >= value) {
+                        clearInterval(t);
+                    }
+                }, speed);
+            } else {
+                p.innerText = value;
+            }
+        }
+        
+        function NumDynamic1(ID, speed, value) {
+            let p = document.getElementById(ID);
+            if (value > 0) {
+                let num = 0;
+                let t = setInterval(function () {
+                    num += 4;
+                    p.innerText = num;
+                    if (num >= value) {
+                        clearInterval(t);
+                    }
+                }, speed);
+            } else {
+                p.innerText = value;
+            }
+        }
+        NumDynamic1("b2p1", 10, 1161);
+        NumDynamic("b2p2", 10, 120);
+        NumDynamic("b2p3", 10, 338);
+        NumDynamic("b2p4", 10, 179);
+        NumDynamic1("b2p5", 10, 608);
+    </script>
+    <div class="Ft">
+        <div class="ft">
+            <div class="ft1">
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>微信公众号</p>
+                </div>
+                <div>
+                    <img src="1.4.jpg" alt="">
+                    <p>新浪微博</p>
+                </div>
+            </div>
+            <div class="ft2">
+                <div>
+                    <a href="">网站首页</a>
+                    <a href="">学校简介</a>
+                    <a href="">学科资源</a>
+                    <a href="">师资力量</a>
+                    <a href="">新闻中心</a>
+                    <a href="">校园风采</a>
+                    <a href="">在线报名</a>
+                    <a href="">联系我们</a>
+                </div>
+                <p>电话：0931-7601072</p>
+                <p>地址：甘肃省兰州市安宁区街坊路11号</p>
+                <p>邮编：730070</p>
+            </div>
+        </div>
+        <p class="ft0">Copyrights 2088 All rights reserved.版权所有 兰州城市学院</p>
+    </div>
+</body>
+
+</html>
