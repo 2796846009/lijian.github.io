@@ -1268,7 +1268,7 @@ button {
 	-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 	-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-	background-image: url("../images/bj.png");
+	background-image: url("../images/1.jpeg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1774,28 +1774,45 @@ body.is-preload #footer {
 	opacity: 0;
 }
 
-#main article .case{
+#main article .case {
 	background-color: #4e048e;
 	color: rgb(255, 255, 255);
-	margin-bottom: 3%;
+	margin-top: 10%;
+	margin-bottom: 10%;
 	position: relative;
 }
 
-#main article .case h3{
+#main article .case div {
+	display: flex;
+	color: #ffffff;
+	border-radius: 10px;
+	width: 60%;
+	text-align: center;
+	padding-top: 5%;
+	margin-left: 5%;
+}
+
+#main article .case h3 {
 	margin-left: 5%;
 	padding-top: 3%;
 	color: #ffffff;
 }
-#main article .case p{
+
+#main article .case p {
 	margin-left: 5%;
 	padding-bottom: 5%;
 	width: 47%;
 }
-#main article .case a{
+
+#main article .case a {
 	position: absolute;
-	top: 30%;
-	right: 10%;
+	top: 50%;
+	right: 7%;
 }
-#main article .case a button{
-	color: #000000;
+
+#main article .ret:hover {
+	border: 1px solid white;
+	padding: 1%;
+	transition: 0.2s;
+	background-color: #4e048e;
 }
