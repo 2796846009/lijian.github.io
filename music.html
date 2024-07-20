@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>来听听音乐吧</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/05-小猫.png">
+    <style>
+        body {
+            background-image: url(images/1.jpeg);
+            background-size: cover;
+            background-position: center;
+            min-height: 98vh;
+            animation: 1s linear wipe-in-up both;
+        }
+
+        @keyframes wipe-in-up {
+            from {
+                clip-path: inset(0 0 100% 0);
+            }
+
+            to {
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        .music-fa {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .music-fa img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .music-son {
+            width: 60%;
+            background-color: black;
+            color: white;
+            right: 0;
+        }
+
+        .music-son .son1 {
+            display: flex;
+            margin-left: 10%;
+        }
+
+        .son1 p {
+            margin-left: 5%;
+            line-height: 50px;
+        }
+
+        .music-son .son2 {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .music-son .son2 button {
+            border-radius: 5px;
+            background-color: black;
+            margin-left: 20px;
+            border: 0;
+        }
+
+        .music-son .son2 button:hover {
+            background-color: rgb(115, 115, 115);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .music-son .son2 .btn2 {
+            display: none;
+        }
+
+        .time66 {
+            width: 150px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        .time66 span {
+            margin-left: 5px;
+        }
+
+        .musicH1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 15vh;
+        }
+
+        .foot {
+            margin: auto;
+            margin-top: 20vh;
+            border: 3px solid white;
+            border-radius: 7px;
+            width: 120px;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .foot a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .foot:hover {
+            background-color: rgb(255, 255, 255);
+            transition: 0.5s;
+        }
+
+        .foot:hover .ret {
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<div style="height: 50px;"></div>
+<h1 class="musicH1">李屹州的收藏歌单</h1>
+<div class="music-fa">
+    <img src="images/si.webp" alt="" class="music-img">
+    <audio src="music/陈一发儿 - 童话镇.mp3"></audio>
+    <div class="music-son">
+        <div class="son1">
+            <h2 class="son1-h2">童话镇</h2>
+            <p class="son1-p">陈一发</p>
+        </div>
+        <div class="son2">
+            <button class="btn3">
+                <svg t="1721489402166" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="9093" width="20px" height="20px">
+                    <path
+                        d="M347.591 528.95l383.21 301.024C745.05 841.166 766 831.078 766 813.024v-602.05c0-18.05-20.95-28.14-35.199-16.948l-383.21 301.023c-11.01 8.65-11.01 25.252 0 33.901M330 864h-64a8 8 0 0 1-8-8V168a8 8 0 0 1 8-8h64a8 8 0 0 1 8 8v688a8 8 0 0 1-8 8"
+                        fill="#ffffff" p-id="9094"></path>
+                </svg>
+            </button>
+            <button class="btn1">
+                <svg t="1721488214374" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="8891" width="20px" height="20px">
+                    <path
+                        d="M715.8 493.5L335 165.1c-14.2-12.2-35-1.2-35 18.5v656.8c0 19.7 20.8 30.7 35 18.5l380.8-328.4c10.9-9.4 10.9-27.6 0-37z"
+                        fill="#ffffff" p-id="8892"></path>
+                </svg>
+            </button>
+            <button class="btn2">
+                <svg t="1721488010078" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="8689" width="20px" height="20px">
+                    <path
+                        d="M304 176h80v672h-80zM712 176h-64c-4.4 0-8 3.6-8 8v656c0 4.4 3.6 8 8 8h64c4.4 0 8-3.6 8-8V184c0-4.4-3.6-8-8-8z"
+                        p-id="8690" fill="#ffffff"></path>
+                </svg>
+            </button>
+            <button class="btn4">
+                <svg t="1721489476892" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="9295" width="20px" height="20px">
+                    <path
+                        d="M676.409 528.95l-383.21 301.024C278.95 841.166 258 831.078 258 813.024v-602.05c0-18.05 20.95-28.14 35.199-16.948l383.21 301.023c11.01 8.65 11.01 25.252 0 33.901M694 864h64a8 8 0 0 0 8-8V168a8 8 0 0 0-8-8h-64a8 8 0 0 0-8 8v688a8 8 0 0 0 8 8"
+                        fill="#ffffff" p-id="9296"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="time66">
+    <svg style="margin-right: 10px;" t="1721496205348" class="icon" viewBox="0 0 1024 1024" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" p-id="2615" width="10px" height="10px">
+        <path
+            d="M1.792 513.107c0 282.352 228.897 511.248 511.248 511.248s511.248-228.897 511.248-511.248c0-282.352-228.897-511.248-511.248-511.248-282.352 0-511.248 228.897-511.248 511.248z"
+            fill="#000000" p-id="2616"></path>
+    </svg>更新于<span class="time66-son">2024.7.10</span>
+</div>
+<div class="foot">
+    <a href="index.html" class="ret">点击返回首页</a>
+</div>
+<script>
+    let mu = document.querySelector("audio");
+    let play = document.querySelector(".btn1");
+    let pause = document.querySelector(".btn2");
+    let left = document.querySelector(".btn3");
+    let right = document.querySelector(".btn4");
+    let h2 = document.querySelector(".son1-h2");
+    let p = document.querySelector(".son1-p");
+    let Time = document.querySelector(".time66-son");
+    let img = document.querySelector(".music-img");
+    let data = [
+        {
+            imgsrc: 'images/si.webp',
+            musrc: 'music/陈一发儿 - 童话镇.mp3',
+            muname: '童话镇',
+            name: '陈一发',
+            time: '2024.7.2'
+        },
+        {
+            imgsrc: 'images/放纵.webp',
+            musrc: 'music/放纵-怪阿姨.320.mp3',
+            muname: '放纵',
+            name: '怪阿姨',
+            time: '2024.7.5'
+        },
+        {
+            imgsrc: 'images/嘉宾.webp',
+            musrc: 'music/嘉宾-路飞文.128.mp3',
+            muname: '嘉宾',
+            name: '路飞文',
+            time: '2024.7.7'
+        },
+        {
+            imgsrc: 'images/命运.webp',
+            musrc: 'music/命运-家家.mp3',
+            muname: '命运',
+            name: '家家',
+            time: '2024.7.8'
+        },
+        {
+            imgsrc: 'images/郑润泽.webp',
+            musrc: 'music/瞬.mp3',
+            muname: '瞬',
+            name: '郑润泽',
+            time: '2024.7.18'
+        },
+        {
+            imgsrc: 'images/无名的人.webp',
+            musrc: 'music/无名的人-毛不易.320.mp3',
+            muname: '无名的人',
+            name: '毛不易',
+            time: '2024.7.20'
+        }
+    ]
+    let index = 0;
+    play.addEventListener("click", function () {
+        mu.play();
+        play.style.display = 'none'
+        pause.style.display = 'block';
+
+    })
+    pause.addEventListener("click", function () {
+        mu.pause();
+        pause.style.display = 'none';
+        play.style.display = 'block'
+    })
+    left.addEventListener("click", function () {
+        if (index == 0) {
+            index = data.length - 1;
+        } else {
+            index--;
+        }
+        img.src = data[index].imgsrc;
+        mu.src = data[index].musrc;
+        h2.innerHTML = data[index].muname;
+        p.innerHTML = data[index].name;
+        Time.innerHTML = data[index].time;
+        mu.play();
+        play.style.display = 'none'
+        pause.style.display = 'block';
+    })
+    right.addEventListener("click", function () {
+        if (index == data.length - 1) {
+            index = 0;
+        } else {
+            index++;
+        }
+        img.src = data[index].imgsrc;
+        mu.src = data[index].musrc;
+        h2.innerHTML = data[index].muname;
+        p.innerHTML = data[index].name;
+        Time.innerHTML = data[index].time;
+        mu.play();
+        play.style.display = 'none'
+        pause.style.display = 'block';
+    })
+</script>
+
+</body>
+
+</html>
