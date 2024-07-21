@@ -52,7 +52,7 @@
 
         .son1 p {
             margin-left: 5%;
-            line-height: 50px;
+            line-height: 35px;
         }
 
         .music-son .son2 {
@@ -67,12 +67,7 @@
             background-color: black;
             margin-left: 20px;
             border: 0;
-        }
-
-        .music-son .son2 button:hover {
-            background-color: rgb(115, 115, 115);
             cursor: pointer;
-            transition: 0.4s;
         }
 
         .music-son .son2 .btn2 {
@@ -239,14 +234,13 @@
     let index = 0;
     play.addEventListener("click", function () {
         mu.play();
-        play.style.display = 'none'
+        play.style.display = 'none';
         pause.style.display = 'block';
-
     })
     pause.addEventListener("click", function () {
         mu.pause();
         pause.style.display = 'none';
-        play.style.display = 'block'
+        play.style.display = 'block';
     })
     left.addEventListener("click", function () {
         if (index == 0) {
@@ -259,6 +253,7 @@
         h2.innerHTML = data[index].muname;
         p.innerHTML = data[index].name;
         Time.innerHTML = data[index].time;
+        mu.currentTime = 0;
         mu.play();
         play.style.display = 'none'
         pause.style.display = 'block';
@@ -274,6 +269,7 @@
         h2.innerHTML = data[index].muname;
         p.innerHTML = data[index].name;
         Time.innerHTML = data[index].time;
+        mu.currentTime = 0;
         mu.play();
         play.style.display = 'none'
         pause.style.display = 'block';
