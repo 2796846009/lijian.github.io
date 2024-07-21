@@ -25,6 +25,22 @@
             }
         }
 
+        .sum {
+            width: 140px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            margin: auto;
+            text-align: center;
+            font-size: small;
+            padding: 5px;
+            text-shadow: 0 0 0px;
+            box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 30px white;
+            margin-bottom: 10vh;
+        }
+
         .music-fa {
             margin: auto;
             width: 90%;
@@ -36,6 +52,7 @@
         .music-fa img {
             width: 120px;
             height: 120px;
+            border: 3px solid rgb(255, 255, 255);
         }
 
         .music-son {
@@ -90,7 +107,9 @@
         .musicH1 {
             text-align: center;
             color: white;
-            margin-bottom: 15vh;
+            text-shadow: 0 0 5px, 0 0 15px;
+            letter-spacing: 5px;
+            margin-bottom: 5vh;
         }
 
         .foot {
@@ -111,7 +130,10 @@
 
         .foot:hover {
             background-color: rgb(255, 255, 255);
-            transition: 0.5s;
+            transition: 0.2s;
+            box-shadow: 0 0 5px white,
+                0 0 10px white,
+                0 0 15px white;
         }
 
         .foot:hover .ret {
@@ -122,6 +144,9 @@
 </head>
 <div style="height: 50px;"></div>
 <h1 class="musicH1">李屹州的收藏歌单</h1>
+<div class="sum">
+    已有 <span class="sum-p"></span>首歌 在歌单中
+</div>
 <div class="music-fa">
     <img src="images/si.webp" alt="" class="music-img">
     <audio src="music/陈一发儿 - 童话镇.mp3"></audio>
@@ -178,6 +203,7 @@
     <a href="index.html" class="ret">点击返回首页</a>
 </div>
 <script>
+    let sum = document.querySelector(".sum-p");
     let mu = document.querySelector("audio");
     let play = document.querySelector(".btn1");
     let pause = document.querySelector(".btn2");
@@ -228,7 +254,7 @@
             musrc: 'music/无名的人-毛不易.320.mp3',
             muname: '无名的人',
             name: '毛不易',
-            time: '2024.7.20'
+            time: '2024.7.18'
         },
         {
             imgsrc: 'images/可不可以 - 张紫豪.webp',
@@ -295,16 +321,21 @@
         }
     ]
     let index = 0;
+
+    sum.textContent = data.length;
+
     play.addEventListener("click", function () {
         mu.play();
         play.style.display = 'none';
         pause.style.display = 'block';
     })
+
     pause.addEventListener("click", function () {
         mu.pause();
         pause.style.display = 'none';
         play.style.display = 'block';
     })
+
     left.addEventListener("click", function () {
         if (index == 0) {
             index = data.length - 1;
@@ -321,6 +352,7 @@
         play.style.display = 'none'
         pause.style.display = 'block';
     })
+
     right.addEventListener("click", function () {
         if (index == data.length - 1) {
             index = 0;
@@ -337,6 +369,7 @@
         play.style.display = 'none'
         pause.style.display = 'block';
     })
+
 </script>
 
 </body>
