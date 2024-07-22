@@ -114,7 +114,7 @@
 
         .foot {
             margin: auto;
-            margin-top: 20vh;
+            margin-top: 8vh;
             border: 3px solid white;
             border-radius: 7px;
             width: 120px;
@@ -140,13 +140,45 @@
             color: rgb(0, 0, 0);
             transition: 0.5s;
         }
+
+        .musicing {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            margin: auto;
+            margin-top: 5%;
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 5px;
+            box-shadow: 0 0 10px white,0 0 20px white;
+        }
+
+        .progress-container {
+            width: 80%;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: white;
+            border-radius: 5px;
+            transition: width 0.2s;
+        }
     </style>
 </head>
 <div style="height: 50px;"></div>
+
 <h1 class="musicH1">李屹州的收藏歌单</h1>
+
 <div class="sum">
     已有 <span class="sum-p"></span>首歌 在歌单中
 </div>
+
 <div class="music-fa">
     <img src="images/si.webp" alt="" class="music-img">
     <audio src="music/陈一发儿 - 童话镇.mp3"></audio>
@@ -191,6 +223,15 @@
         </div>
     </div>
 </div>
+
+<div class="musicing">
+    <span class="son3-t1">00:00</span>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <span class="son3-t2">00:00</span>
+</div>
+
 <div class="time66">
     <svg style="margin-right: 10px;" t="1721496205348" class="icon" viewBox="0 0 1024 1024" version="1.1"
         xmlns="http://www.w3.org/2000/svg" p-id="2615" width="10px" height="10px">
@@ -199,10 +240,12 @@
             fill="#000000" p-id="2616"></path>
     </svg>更新于<span class="time66-son">2024.7.10</span>
 </div>
+
 <div class="foot">
     <a href="index.html" class="ret">点击返回首页</a>
 </div>
-<script>
+
+<script> //四个按钮
     let sum = document.querySelector(".sum-p");
     let mu = document.querySelector("audio");
     let play = document.querySelector(".btn1");
@@ -369,6 +412,91 @@
         play.style.display = 'none'
         pause.style.display = 'block';
     })
+
+</script>
+
+<script>// 更新歌曲索引并播放下一首歌曲的函数
+    function playNextSong() {
+        // 检查是否有更多歌曲
+        if (index < data.length - 1) {
+            // 更新索引
+            index++;
+            // 更新图片和歌曲源
+            img.src = data[index].imgsrc;
+            mu.src = data[index].musrc;
+            // 更新歌曲信息
+            h2.innerHTML = data[index].muname;
+            p.innerHTML = data[index].name;
+            Time.innerHTML = data[index].time;
+            // 重置当前播放时间为0
+            mu.currentTime = 0;
+            // 开始播放
+            mu.play();
+        } else {
+            // 如果没有更多歌曲，可以在这里添加循环播放的功能
+            // 例如：index = 0; mu.play();
+        }
+    }
+
+    // 添加事件监听器来处理音频结束事件
+    mu.addEventListener('ended', playNextSong);
+</script>
+
+<script>// 更新进度条的函数  
+    function updateProgress() {
+        const progressBar = document.getElementById('progressBar');
+        const percentage = (mu.currentTime / mu.duration) * 100;
+        progressBar.style.width = `${percentage}%`;
+    }
+
+    // 当歌曲播放时，更新进度条
+    mu.addEventListener('timeupdate', updateProgress);
+
+    // 当用户点击进度条时，跳转到相应的位置
+    const progressContainer = document.querySelector('.progress-container');
+    progressContainer.addEventListener('click', function (e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+        const duration = mu.duration;
+        mu.currentTime = (clickX / width) * duration;
+    });
+
+</script>
+
+<script>//进度条两边的数字
+    // 获取 son3-t1 和 son3-t2 的元素
+    const son3T1 = document.querySelector('.son3-t1');
+    const son3T2 = document.querySelector('.son3-t2');
+
+    // 更新 son3-t1 和 son3-t2 的函数
+    function updateSon3Times() {
+        const currentTime = mu.currentTime;
+        const duration = mu.duration;
+
+        // 格式化时间，例如将 32.123 转换为 00:32.123
+        function formatTime(time) {
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // 更新当前时间
+        son3T1.textContent = formatTime(currentTime);
+
+        // 更新总时长
+        if (duration > 0) {
+            son3T2.textContent = formatTime(duration);
+        } else {
+            son3T2.textContent = '--:--'; // 表示未加载时长
+        }
+    }
+
+    // 添加事件监听器来更新 son3-t1 和 son3-t2
+    mu.addEventListener('timeupdate', updateSon3Times);
+    mu.addEventListener('durationchange', updateSon3Times); // 确保在播放开始时也更新时长
+
+    // 初始化更新
+    updateSon3Times();
 
 </script>
 
