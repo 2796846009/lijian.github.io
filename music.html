@@ -150,10 +150,10 @@
             color: white;
             border: 1px solid rgb(255, 255, 255);
             padding: 5px;
-            box-shadow: 0 0 10px white,0 0 20px white;
+            box-shadow: 0 0 10px white, 0 0 20px white;
         }
 
-        .progress-container {
+        /* .progress-container {
             width: 80%;
             margin-top: 10px;
             background-color: rgba(255, 255, 255, 0.5);
@@ -168,6 +168,37 @@
             background-color: white;
             border-radius: 5px;
             transition: width 0.2s;
+        }
+            
+        */
+
+        .progress-range {
+            -webkit-appearance: none;
+            /* 为了隐藏默认的滑块样式 */
+            width: 80%;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .progress-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* 为了隐藏默认的滑块样式 */
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .progress-range::-moz-range-thumb {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -226,9 +257,7 @@
 
 <div class="musicing">
     <span class="son3-t1">00:00</span>
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
+    <input type="range" id="progressRange" min="0" max="100" value="0" class="progress-range">
     <span class="son3-t2">00:00</span>
 </div>
 
@@ -449,25 +478,23 @@
     mu.addEventListener('ended', playNextSong);
 </script>
 
-<script>// 更新进度条的函数  
+<script>// 更新进度条的函数
+    const progressRange = document.getElementById('progressRange');
+
+
     function updateProgress() {
-        const progressBar = document.getElementById('progressBar');
         const percentage = (mu.currentTime / mu.duration) * 100;
-        progressBar.style.width = `${percentage}%`;
+        progressRange.value = percentage;
     }
 
-    // 当歌曲播放时，更新进度条
-    mu.addEventListener('timeupdate', updateProgress);
-
-    // 当用户点击进度条时，跳转到相应的位置
-    const progressContainer = document.querySelector('.progress-container');
-    progressContainer.addEventListener('click', function (e) {
-        const width = this.clientWidth;
-        const clickX = e.offsetX;
-        const duration = mu.duration;
-        mu.currentTime = (clickX / width) * duration;
+    // 当用户拖动滑块时，更新音频的当前时间
+    progressRange.addEventListener('input', function () {
+        const percentage = progressRange.value / 100;
+        mu.currentTime = percentage * mu.duration;
     });
 
+    // 添加事件监听器来处理音频播放
+    mu.addEventListener('timeupdate', updateProgress);
 </script>
 
 <script>//进度条两边的数字
