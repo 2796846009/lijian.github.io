@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study</title>
+    <link rel="shortcut icon" href="images/05-小猫.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        body {
+            font-family: 'Noto Serif SC';
+        }
+
+        .head {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            padding: 10px;
+            padding-bottom: 0;
+            color: white;
+            transition: color 0.5s ease, background-color 0.5s ease;
+        }
+
+        .head:hover {
+            background-color: white;
+        }
+
+        .head.active {
+            background-color: white;
+        }
+
+        .head div {
+            display: flex;
+        }
+
+        .head div:hover {
+            transition: 0.5s;
+
+        }
+
+        .head .h1 a {
+            margin-left: 10px;
+            transition: color 0.5s ease;
+            padding-bottom: 10px;
+            position: relative;
+            /* 为边框定位提供参照 */
+            overflow: hidden;
+            /* 隐藏超出链接的边框 */
+        }
+
+        /* 定义关键帧动画 */
+        @keyframes borderSlideIn {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .head .h1 a:hover {
+            color: #1296db;
+            padding-bottom: 10px;
+            /* 保持底部内边距 */
+        }
+
+        .head .h1 a:hover:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* 初始宽度为100%，确保动画从左到右展开 */
+            height: 3px;
+            background-color: #1296db;
+            animation: borderSlideIn 0.5s ease;
+            /* 应用动画并保持最后状态 */
+        }
+
+
+
+        .h1a.active1 {
+            color: #1296db;
+        }
+
+        .header {
+            width: 100%;
+            background-image: url(images/1.jpeg);
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .header img {
+            width: 150px;
+            border-radius: 100px;
+            margin-top: 20vh;
+            border: 2px solid white;
+        }
+
+        .header img:hover {
+            transform: rotateZ(360deg);
+            transition: 1s;
+        }
+
+        .header h1 {
+            margin-top: 5vh;
+            color: white;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+
+            0% {
+                color: #ffffff;
+                text-shadow: 0 0 15px #1296db;
+            }
+
+            50% {
+                color: #1296db;
+                text-shadow: 0 0 15px #ffffff;
+            }
+        }
+
+        .header svg {
+            margin-top: 25vh;
+            animation: colorChangeno 2s infinite;
+        }
+
+        @keyframes colorChangeno {
+
+            0% {
+                transform: rotateY(0);
+            }
+
+            50%{
+                transform: rotateY(180deg);
+            }
+        }
+
+        .head0 {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer;
+            display: block;
+            /* 初始设置为 block，以便可以应用 transition 效果 */
+            opacity: 0;
+            /* 初始不透明度为 0，使其不可见 */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            /* 平滑过渡效果 */
+        }
+
+        .head0.show {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+
+        .head0 svg path {
+            background-color: black;
+            transition: 0.5s;
+        }
+
+        .head0:hover path {
+            fill: #1296db;
+        }
+
+        .box {
+            text-align: center;
+            height: 100vh;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head0">
+        <svg t="1722147228039" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3545" width="40" height="40">
+            <path
+                d="M756.906667 616.533333a35.84 35.84 0 0 1-50.773334 0L512 407.466667l-194.986667 207.36a35.84 35.84 0 1 1-52.48-49.066667l220.586667-235.52a35.84 35.84 0 0 1 52.48 0l220.586667 235.52a35.84 35.84 0 0 1-1.28 50.773333zM512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z"
+                fill="#000000" p-id="3546"></path>
+        </svg>
+    </div>
+
+    <div class="head">
+        <div class="h1">
+            <svg t="1722144992041" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="949" width="20px" height="20px">
+                <path
+                    d="M72.704 1024C32.768 1024 0 991.232 0 950.272V399.36c0-37.888 19.456-74.752 50.176-96.256L441.344 23.552C461.824 8.192 486.4 0 512 0s50.176 8.192 70.656 22.528l391.168 279.552c30.72 22.528 50.176 58.368 50.176 97.28v550.912c0 39.936-32.768 72.704-72.704 72.704H72.704zM512 84.992c-7.168 0-14.336 2.048-20.48 7.168L100.352 371.712c-9.216 7.168-14.336 16.384-14.336 27.648v502.784c0 9.216 4.096 18.432 10.24 24.576 6.144 6.144 15.36 10.24 24.576 10.24h782.336c9.216 0 18.432-4.096 24.576-10.24 6.144-6.144 10.24-15.36 10.24-24.576V399.36c0-11.264-6.144-21.504-14.336-27.648L532.48 92.16c-6.144-4.096-13.312-7.168-20.48-7.168z"
+                    p-id="950" fill="#1296db"></path>
+                <path
+                    d="M668.672 855.04c-23.552 0-43.008-19.456-43.008-43.008V656.384C625.664 593.92 574.464 542.72 512 542.72s-113.664 51.2-113.664 113.664v156.672c0 23.552-19.456 43.008-43.008 43.008-23.552 0-43.008-19.456-43.008-43.008V656.384c0-109.568 89.088-199.68 199.68-199.68 109.568 0 199.68 89.088 199.68 199.68v156.672c0 23.552-19.456 41.984-43.008 41.984z"
+                    p-id="951" fill="#1296db"></path>
+            </svg>
+            <a class="h1a" href="">首页</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="images/preview.gif" alt="">
+        <h1>人间何所以，观风与月舒</h1>
+        <svg class="down" t="1722145905285" class="icon" viewBox="0 0 1819 1024" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" p-id="2508" width="5vh" height="5vh">
+            <path
+                d="M1788.061538 37.134066h-5.626373a112.527473 112.527473 0 0 0-154.162638 0L909.221978 750.558242 191.296703 31.507692a112.527473 112.527473 0 0 0-154.162637 0 112.527473 112.527473 0 0 0 0 154.162638L832.703297 992.492308a112.527473 112.527473 0 0 0 154.162637 0l801.195604-801.195605a112.527473 112.527473 0 0 0 0-154.162637z"
+                fill="#ffffff" p-id="2509"></path>
+        </svg>
+        <script>
+            // 获取返回顶部按钮和向下箭头元素
+            let backtop = document.querySelector(".head0");
+            let downArrow = document.querySelector(".down");
+            let head = document.querySelector(".head");
+            let h1a = document.querySelector(".h1a");
+
+            // 监听滚动事件，根据滚动位置显示或隐藏返回顶部按钮
+            window.addEventListener("scroll", function () {
+                let num = document.documentElement.scrollTop || document.body.scrollTop;
+                if (num > 0) {
+                    backtop.classList.add('show'); // 添加 'show' 类以触发过渡效果
+                    head.classList.add("active");
+                    h1a.classList.add("active1");
+                } else {
+                    backtop.classList.remove('show');// 移除 'show' 类以隐藏按钮
+                    head.classList.remove("active");
+                    h1a.classList.remove("active1");
+                }
+            });
+
+            // 点击返回顶部按钮时，滚动到页面顶部
+            backtop.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            // 点击向下箭头时，滚动到.box元素
+            downArrow.addEventListener("click", function () {
+                let box = document.querySelector("#box");
+                box.scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+
+        </script>
+    </div>
+
+    <div class="box" id="box">
+        666
+    </div>
+</body>
+
+</html>
