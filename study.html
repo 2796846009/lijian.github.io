@@ -29,10 +29,16 @@
             padding-bottom: 0;
             color: white;
             transition: color 0.5s ease, background-color 0.5s ease;
+            display: flex;
+            justify-content: end;
         }
 
         .head:hover {
             background-color: white;
+        }
+
+        .head:hover .h1a {
+            color: #1296db;
         }
 
         .head.active {
@@ -41,11 +47,11 @@
 
         .head div {
             display: flex;
+            margin-right: 5%;
         }
 
         .head div:hover {
             transition: 0.5s;
-
         }
 
         .head .h1 a {
@@ -88,10 +94,14 @@
             /* 应用动画并保持最后状态 */
         }
 
-
-
         .h1a.active1 {
             color: #1296db;
+        }
+
+        .head #h2 svg{
+            margin-top: -4px;
+            margin-right: -5px;
+            margin-left: 20px;
         }
 
         .header {
@@ -145,7 +155,7 @@
                 transform: rotateY(0);
             }
 
-            50%{
+            50% {
                 transform: rotateY(180deg);
             }
         }
@@ -207,7 +217,16 @@
                     d="M668.672 855.04c-23.552 0-43.008-19.456-43.008-43.008V656.384C625.664 593.92 574.464 542.72 512 542.72s-113.664 51.2-113.664 113.664v156.672c0 23.552-19.456 43.008-43.008 43.008-23.552 0-43.008-19.456-43.008-43.008V656.384c0-109.568 89.088-199.68 199.68-199.68 109.568 0 199.68 89.088 199.68 199.68v156.672c0 23.552-19.456 41.984-43.008 41.984z"
                     p-id="951" fill="#1296db"></path>
             </svg>
-            <a class="h1a" href="">首页</a>
+            <a class="h1a" href="index.html">首页</a>
+        </div>
+        <div class="h1" id="h2">
+            <svg t="1722477063629" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="2731" width="30px" height="30px">
+                <path
+                    d="M768.496 359.12L648.224 572a128 128 0 1 1-1.648-92.288l90.784-160.656A295.2 295.2 0 0 0 520 224C356.512 224 224 356.512 224 520S356.512 816 520 816C683.472 816 816 683.472 816 520c0-59.328-17.44-114.56-47.504-160.88zM600.272 562.352l-0.272-0.144 1.648-2.912a80 80 0 1 0-1.376 3.072zM864 520C864 709.984 709.984 864 520 864S176 709.984 176 520 330.016 176 520 176 864 330.016 864 520z"
+                    fill="#1296db" p-id="2732"></path>
+            </svg>
+            <a href="music.html" class="h1a">音乐</a>
         </div>
     </div>
 
@@ -225,7 +244,7 @@
             let backtop = document.querySelector(".head0");
             let downArrow = document.querySelector(".down");
             let head = document.querySelector(".head");
-            let h1a = document.querySelector(".h1a");
+            let h1as = document.getElementsByClassName("h1a"); // 使用正确的方法获取类名为"h1a"的所有元素
 
             // 监听滚动事件，根据滚动位置显示或隐藏返回顶部按钮
             window.addEventListener("scroll", function () {
@@ -233,11 +252,17 @@
                 if (num > 0) {
                     backtop.classList.add('show'); // 添加 'show' 类以触发过渡效果
                     head.classList.add("active");
-                    h1a.classList.add("active1");
+                    // 遍历所有.h1a元素并添加"active1"类
+                    for (let h1a of h1as) {
+                        h1a.classList.add("active1");
+                    }
                 } else {
-                    backtop.classList.remove('show');// 移除 'show' 类以隐藏按钮
+                    backtop.classList.remove('show'); // 移除 'show' 类以隐藏按钮
                     head.classList.remove("active");
-                    h1a.classList.remove("active1");
+                    // 遍历所有.h1a元素并移除"active1"类
+                    for (let h1a of h1as) {
+                        h1a.classList.remove("active1");
+                    }
                 }
             });
 
