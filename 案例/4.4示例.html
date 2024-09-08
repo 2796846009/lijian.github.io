@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹球游戏</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            position: relative;
+            width: 440px;
+            height: 440px;
+            background-color: blanchedalmond;
+        }
+
+        .ball {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 0px;
+            top: 0px;
+            background-color: orange;
+            border-radius: 30px;
+        }
+
+        .board {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 10px;
+            width: 80px;
+            border-radius: 5px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Application">
+        <div class="container">
+            <div class="board" :style="{left: boardX+'px'}"></div>
+            <div class="ball" :style="{left:ballX+'px',top:ballY+'px'}"></div>
+            <h1 v-if="fail" style="text-align: center;">游戏失败</h1>
+        </div>
+    </div>
+    <script src="node_modules/vue/dist/vue.global.js"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    boardX: 0,
+                    ballX: 0,
+                    ballY: 0,
+                    rateX: 0.1,
+                    rateY: 0.1,
+                    fail: false
+                }
+            },
+            mounted() {
+                this.enterKeyup();
+                this.rateX = (Math.random() + 3)
+                this.rateY = (Math.random() + 3)
+                this.timer = setInterval(() => {
+                    if (this.ballX + this.rateX >= 440 - 30) {
+                        this.rateX *= -1
+                    }
+                    if (this.ballX + this.rateX <= 0) {
+                        this.rateX *= -1
+                    }
+                    if (this.ballY + this.rateY <= 0) {
+                        this.rateY *= -1
+                    }
+                    this.ballX += this.rateX
+                    this.ballY += this.rateY
+                    if (this.ballY >= 440 - 30 - 10) {
+                        if (this.boardX <= this.ballX + 30 && this.boardX + 80 >= this.ballX) {
+                            this.rateY *= -1
+                        } else {
+                            clearInterval(this.timer)
+                            this.fail = true
+                        }
+                    }
+                }, 2)
+            },
+            methods: {
+                keydown(event) {
+                    if (event.key == "ArrowLeft") {
+                        if (this.boardX > 10) {
+                            this.boardX -= 20
+                        }
+                    } else if (event.key == "ArrowRight") {
+                        if (this.boardX < 440 - 80) {
+                            this.boardX += 20
+                        }
+                    }
+                },
+                enterKeyup(){
+                    document.addEventListener("keydown",this.keydown);
+                }
+            }
+        }
+        Vue.createApp(App).mount('#Application')
+    </script>
+</body>
+
+</html>
